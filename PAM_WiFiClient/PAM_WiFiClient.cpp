@@ -1,10 +1,13 @@
+//////////////////////////////////////////////////////////////////////
 //
-// Include the PAM_WiFi header
+//                    PI and more
+//              PAM_WiFiClient library
 //
-// created by PI and more, piandmore@j-tools.net
-//
-// More extensive documentation can be found here:
 // https://piandmore.wordpress.com/tag/pam_wificlient
+//
+//////////////////////////////////////////////////////////////////////
+//
+// Include the PAM_WiFiClient header
 //
 #include <PAM_WiFiClient.h>
 
