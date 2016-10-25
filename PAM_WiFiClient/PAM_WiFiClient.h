@@ -13,14 +13,14 @@
 
 #include <Arduino.h>
 
-String getURL (char*, String);
-String getURL (char*, String, int);
-String getURLFullParse (char*, String, void (*)(String));
-String getURLFullParse (char*, String, void (*)(String), int);
-String getURLBodyParse (char*, String, void (*)(String));
-String getURLBodyParse (char*, String, void (*)(String), int);
-String getURLParse (char*, String, bool, void (*)(String));
-String getURLParse (char*, String, bool, void (*)(String), int);
+String getURL (String, String);
+String getURL (String, String, int);
+String getURLFullParse (String, String, void (*)(String));
+String getURLFullParse (String, String, void (*)(String), int);
+String getURLBodyParse (String, String, void (*)(String));
+String getURLBodyParse (String, String, void (*)(String), int);
+String getURLParse (String, String, bool, void (*)(String));
+String getURLParse (String, String, bool, void (*)(String), int);
 void doNothing (String);
 
 #endif

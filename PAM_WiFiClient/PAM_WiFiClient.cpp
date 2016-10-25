@@ -3,6 +3,9 @@
 //
 // created by PI and more, piandmore@j-tools.net
 //
+// More extensive documentation can be found here:
+// https://piandmore.wordpress.com/tag/pam_wificlient
+//
 #include <PAM_WiFiClient.h>
 
 //
@@ -31,17 +34,19 @@ void doNothing (String webLine) {
 //
 // getURLParse, get the url url from the host host on port port and send each line 
 // through the function g. The boolean fullContent determines whether only the header lines
-// or all ilnes are send through to the function g
+// or all lines are send through to the function g
 //
-String getURLParse (char* host, String url, bool fullContent, void (*g)(String l), int port) {
+String getURLParse (String host, String url, bool fullContent, void (*g)(String l), int port) {
   String lastline;
   boolean inPage;
   inPage = false;
   WiFiClient client;
+  char xhost[50];
+  host.toCharArray(xhost,50);
   //
   // Try to connect to the host. If unsuccesful, quit the function with the error URLNOCONNECT
   //
-  if (!client.connect(host,port)) {
+  if (!client.connect(xhost,port)) {
     return URLNOCONNECT;
   }
   //
@@ -86,30 +91,30 @@ String getURLParse (char* host, String url, bool fullContent, void (*g)(String l
   return lastline;
 }
 
-String getURLParse (char* host, String url, bool fullContent, void (*g)(String l)) {
+String getURLParse (String host, String url, bool fullContent, void (*g)(String l)) {
   return getURLParse(host,url,fullContent,g,80);
 }
 
-String getURLFullParse (char* host, String url, void (*g)(String l), int port) {
+String getURLFullParse (String host, String url, void (*g)(String l), int port) {
   return getURLParse(host,url,true,g,port);
 }
 
-String getURLFullParse (char* host, String url, void (*g)(String l)) {
+String getURLFullParse (String host, String url, void (*g)(String l)) {
   return getURLParse(host,url,true,g,80);
 }
 
-String getURLBodyParse (char* host, String url, void (*g)(String l), int port) {
+String getURLBodyParse (String host, String url, void (*g)(String l), int port) {
   return getURLParse(host,url,false,g,port);
 }
 
-String getURLBodyParse (char* host, String url, void (*g)(String l)) {
+String getURLBodyParse (String host, String url, void (*g)(String l)) {
   return getURLParse(host,url,false,g,80);
 }
 
-String getURL (char* host, String url, int port) {
+String getURL (String host, String url, int port) {
   return getURLParse(host,url,false,doNothing,port);
 }
 
-String getURL (char* host, String url) {
+String getURL (String host, String url) {
   return getURLParse(host,url,false,doNothing,80);
 }
