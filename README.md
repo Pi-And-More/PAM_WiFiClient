@@ -19,13 +19,13 @@ It contains the following functions:
 // through the function g. The boolean fullContent determines whether only the header lines
 // or all lines are send through to the function g
 //
-String getURLParse (char* host, String url, bool fullContent, void (*g)(String l), int port)
-String getURLParse (char* host, String url, bool fullContent, void (*g)(String l))
-String getURLFullParse (char* host, String url, void (*g)(String l), int port)
-String getURLFullParse (char* host, String url, void (*g)(String l))
-String getURLBodyParse (char* host, String url, void (*g)(String l), int port)
-String getURLBodyParse (char* host, String url, void (*g)(String l))
-String getURL (char* host, String url, int port)
-String getURL (char* host, String url)
+String getURLParse (String host, String url, bool fullContent, void (*g)(String l), int port)
+String getURLParse (String host, String url, bool fullContent, void (*g)(String l))
+String getURLFullParse (String host, String url, void (*g)(String l), int port)
+String getURLFullParse (String host, String url, void (*g)(String l))
+String getURLBodyParse (String host, String url, void (*g)(String l), int port)
+String getURLBodyParse (String host, String url, void (*g)(String l))
+String getURL (String host, String url, int port)
+String getURL (String host, String url)
 
 You can read about it in more detail on https://piandmore.wordpress.com/tag/pam_wificlient
