@@ -16,6 +16,10 @@
 //
 #include <ESP8266WiFi.h>
 
+void doSerial (String webLine) {
+  Serial.println(webLine);
+}
+
 //
 // The doNothing function which is used as a parameter if we do not care about
 // the webpage result, aka fire and forget

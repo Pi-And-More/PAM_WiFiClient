@@ -1,3 +1,4 @@
+PAM_WiFiClient	KEYWORD2
 getURL	KEYWORD2
 getURLFullParse	KEYWORD2
 getURLBodyParse	KEYWORD2

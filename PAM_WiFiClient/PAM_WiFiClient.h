@@ -22,5 +22,6 @@ String getURLBodyParse (String, String, void (*)(String), int);
 String getURLParse (String, String, bool, void (*)(String));
 String getURLParse (String, String, bool, void (*)(String), int);
 void doNothing (String);
+void doSerial (String);
 
 #endif
