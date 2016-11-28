@@ -28,4 +28,22 @@ String getURLBodyParse (String host, String url, void (*g)(String l))
 String getURL (String host, String url, int port)
 String getURL (String host, String url)
 
+//
+// The urlEncode function will do as it's name suggest, convert
+// a char array to a url encoded String.
+//
+String urlEncode (const char* msg)
+
+//
+// The doNothing function which is used as a parameter if we do not care about
+// the webpage result, aka fire and forget
+//
+void doNothing (String webLine)
+
+//
+// The doSerial function which is used as a parameter if we want to see all output
+// of the requested webpage.
+//
+void doSerial (String webLine)
+
 You can read about it in more detail on https://piandmore.wordpress.com/tag/pam_wificlient

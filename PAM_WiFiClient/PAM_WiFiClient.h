@@ -13,6 +13,7 @@
 
 #include <Arduino.h>
 
+String urlEncode (const char*);
 String getURL (String, String);
 String getURL (String, String, int);
 String getURLFullParse (String, String, void (*)(String));
